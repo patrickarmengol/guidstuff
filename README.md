@@ -10,6 +10,14 @@ docker run --name=postgres -d -e POSTGRES_USER=myuser -POSTGRES_PASSWORD=mypass 
 postgresql+asyncpg://myuser:mypass@localhost:5432/mypg
 ```
 
+## setting up venv
+
+```
+python -m venv .venv
+source .venv/bin/activate
+pip install -e .
+```
+
 ## alembic cmd
 
 ```
