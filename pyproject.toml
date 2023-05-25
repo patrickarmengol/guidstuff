@@ -6,4 +6,12 @@ build-backend = "hatchling.build"
 name = "guidstuff"
 version = "0.0.1"
 description = ""
-dependencies = ["litestar", "sqlalchemy", "asyncpg", "alembic"]
+dependencies = [
+  "litestar @ git+https://github.com/litestar-org/litestar.git@main",
+  "sqlalchemy",
+  "asyncpg",
+  "alembic",
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true

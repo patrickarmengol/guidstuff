@@ -1,8 +1,8 @@
 """create whatever table
 
-Revision ID: fe08b6f6163b
+Revision ID: 3e4cd18cb2a2
 Revises: 
-Create Date: 2023-05-22 21:31:06.839339
+Create Date: 2023-05-25 19:42:09.809250
 
 """
 from alembic import op
@@ -15,7 +15,7 @@ from litestar.contrib.sqlalchemy.types import GUID
 sa.GUID = GUID
 
 # revision identifiers, used by Alembic.
-revision = 'fe08b6f6163b'
+revision = '3e4cd18cb2a2'
 down_revision = None
 branch_labels = None
 depends_on = None
