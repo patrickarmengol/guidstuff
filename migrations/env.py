@@ -56,10 +56,22 @@ def run_migrations_offline() -> None:
 
 
 def do_run_migrations(connection: Connection) -> None:
-    context.configure(connection=connection, target_metadata=target_metadata)
+    context.configure(
+        connection=connection,
+        target_metadata=target_metadata,
+        compare_type=True,
+        user_module_prefix="sa.",
+    )
 
     with context.begin_transaction():
         context.run_migrations()
+
+
+# def do_run_migrations(connection: Connection) -> None:
+#     context.configure(connection=connection, target_metadata=target_metadata)
+#
+#     with context.begin_transaction():
+#         context.run_migrations()
 
 
 async def run_async_migrations() -> None:
